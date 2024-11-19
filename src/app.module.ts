@@ -9,14 +9,18 @@ import { Customer } from './model/customer';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
-      port: 5433,
+      host: 'my-db-coco.c14688k4utx7.ap-southeast-2.rds.amazonaws.com',
+      port: 5432,
       username: 'postgres',
-      password: '123456',
+      password: 'long332001',
       database: 'postgres',
-      schema: 'gduck', 
-      entities: [Customer], 
+      schema: 'public',
+      entities: [Customer],
       synchronize: true,
+      ssl: {
+        rejectUnauthorized: false, 
+      },
+    
     }),
     
   ],
