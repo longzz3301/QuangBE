@@ -20,7 +20,7 @@ export class CreateCustomerDto {
 
   @IsOptional()
   @IsNumber()
-  pickupQuantity: number;
+  pickupQuantity: string;
 
   @IsOptional()
   @IsString()
